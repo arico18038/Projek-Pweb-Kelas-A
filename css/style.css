@@ -1,0 +1,29 @@
+*,
+html{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+.navbar{
+    background-color: slategray;
+    width: 100%;
+    height: 100px;
+}
+
+.ul-navbar{
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+
+}
+.li-navbar{
+    list-style: none;
+    padding: 20px;
+    color: whitesmoke;
+    margin: 5px;
+    font-size: 20px;
+
+}
