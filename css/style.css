@@ -65,7 +65,7 @@
     line-height: 25px;
 }
 /* css for lo */
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -193,4 +193,4 @@ input[type="radio"]{
 .form .field input:focus::placeholder{
     color: #1a75ff;
 }
-form .form-inner
+form .form-inner */
