@@ -3,8 +3,13 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
+
+
 .banner {
+    background-color: #fff;
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(background.jpg);
@@ -12,12 +17,18 @@
     background-position: center;
 }
 .navbar {
-    width: 85%;
-    margin: auto;
-    padding: 35px 0;
     display: flex;
-    align-items: center;
+    background-color: rgb(0, 0, 0);
     justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 3%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
 }
 .logo {
     width: 120px;
@@ -31,10 +42,10 @@
 }
 .navbar ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #fff; 
     text-transform: uppercase;
 }
-.navbar ul li :: after {
+.navbar ul li ::after {
     content: '';
     height: 3px;
     width: 0;
@@ -44,7 +55,7 @@
     bottom: -10px;
     transition: 0.5s;
 }
-.navbar ul li: hover:: after {
+.navbar ul li: :hover::after {
     width: 100%;
 }
 .content {
@@ -63,4 +74,66 @@
     margin: 20px auto;
     font-weight: 100;
     line-height: 25px;
+}
+/* css untuk check in */
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #555;
+}
+
+section.booking {
+    padding: 20px;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: calc(100% - 12px);
+}
+
+form .guests {
+    display: flex;
+    justify-content: space-between;
+}
+
+form .guests label {
+    flex: 1;
+}
+
+form .guests input {
+    width: 60px;
+    margin-right: 10px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #555;
 }
