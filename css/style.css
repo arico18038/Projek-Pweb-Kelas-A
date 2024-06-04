@@ -75,6 +75,10 @@
     font-weight: 100;
     line-height: 25px;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 44740d3e401e46957f7c9832888a12f85fbf8408
 /* css untuk check in */
 button {
     padding: 10px 20px;
@@ -137,6 +141,10 @@ form button {
 form button:hover {
     background: #555;
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 44740d3e401e46957f7c9832888a12f85fbf8408
 /* css for lo */
 *{
     margin: 0;
@@ -267,6 +275,7 @@ input[type="radio"]{
     color: #1a75ff;
 }
 form .form-inner
+<<<<<<< HEAD
 
 /* <<<<<<< ABOUT */
 .about {
@@ -308,3 +317,6 @@ form .form-inner
     color: #fff;
 }
 
+=======
+>>>>>>> fb3ff336143a1e22b5a7359dfe2f02d6383dc338
+>>>>>>> 44740d3e401e46957f7c9832888a12f85fbf8408
