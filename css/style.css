@@ -3,8 +3,13 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
+
+
 .banner {
+    background-color: #fff;
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(background.jpg);
@@ -12,12 +17,18 @@
     background-position: center;
 }
 .navbar {
-    width: 85%;
-    margin: auto;
-    padding: 35px 0;
     display: flex;
-    align-items: center;
+    background-color: rgb(0, 0, 0);
     justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 3%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
 }
 .logo {
     width: 120px;
@@ -31,10 +42,10 @@
 }
 .navbar ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #fff; 
     text-transform: uppercase;
 }
-.navbar ul li :: after {
+.navbar ul li ::after {
     content: '';
     height: 3px;
     width: 0;
@@ -44,7 +55,7 @@
     bottom: -10px;
     transition: 0.5s;
 }
-.navbar ul li: hover:: after {
+.navbar ul li: :hover::after {
     width: 100%;
 }
 .content {
@@ -64,3 +75,236 @@
     font-weight: 100;
     line-height: 25px;
 }
+/* css untuk check in */
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #555;
+}
+
+section.booking {
+    padding: 20px;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: calc(100% - 12px);
+}
+
+form .guests {
+    display: flex;
+    justify-content: space-between;
+}
+
+form .guests label {
+    flex: 1;
+}
+
+form .guests input {
+    width: 60px;
+    margin-right: 10px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #555;
+}
+/* css for lo */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+html.body{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: content;
+    background-color: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+}
+::selection{
+    background: #1a75ff;
+    color: #fff;
+}
+.wrapper{
+    overflow: hidden;
+    max-width: 390px;
+    background: #fff;
+    padding: 30px;  
+    border-radius: 15px;
+    box-shadow: rgb(38, 57, 77) 8px 20px 30px -10px;
+}
+.wrapper .title-text{
+    display: flex;
+    width: 200%;
+}
+.wrapper .title{    
+    width: 50%;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .slide{
+    position: relative;
+    display: flex;
+    height: 50px;
+    width: 100px;
+    overflow: hidden;
+    margin: 30px 0 10px 0;
+    justify-content: space-between;
+    border: 1px solid lightgrey;
+    border-radius: 15px;
+}
+.slide .slides{
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 48px;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.6s ease;
+}
+.slide label .signup{
+    color: #000;
+}
+.slide .slide-tab{
+    position: absolute;
+    height: 1005;
+    width: 50%;
+    left: 0;
+    z-index: 0;
+    border-radius: 15px;
+    background: -webkit-linear-gradient(left, #003366, #004080, #0059b3, #0073e6);
+    transition: all 0.6s cubic-bezier(0.68, -0.265, 0.265, 1.55);
+}
+input[type="radio"]{
+    display: none;
+}
+#signup:checked ~ .slider-tab{
+    left: 50%;
+} 
+#signup:checked ~ label .signup{
+    color: #000;
+    cursor: default;
+    user-select: none;
+} 
+#signup:checked ~ label .login{
+    color: #000;
+} 
+#login:checked ~ label .signup{
+    color: #000;
+} 
+#login:checked ~ label .login{
+    color: #000;
+    user-select: none;
+} 
+.wrapper .form-container{
+    width: 100%;
+    overflow: hidden;
+}
+.form-container .form-inner{
+    display: flex;
+    width: 200%;
+}
+.form-container .form-inner form{
+    width: 50%;
+    transition: all 0.6s cubic-bezier(0.68, -0.265, 0.265, 1.55);
+}
+.form-inner form .field{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+.form-inner form .field input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border-bottom-width: 2px;
+    font-size: 17px;
+    transition: all 0.3s ease;
+}
+.form-inner form .field input:focus{
+    border-color: #1a75ff;
+}
+.form-inner form .field input::placeholder{
+    color: #999;
+    transition: all 0.3s ease;
+}
+.form .field input:focus::placeholder{
+    color: #1a75ff;
+}
+form .form-inner
+
+/* <<<<<<< ABOUT */
+.about {
+    width: 80%;
+    height: 100%;
+    border-radius: 25px;
+    margin-top: 45%; 
+    margin-left: 165px;
+}
+
+.text {
+    margin-top: 150px;
+}
+
+.about p {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    color: #fff;
+}
+
+.about h1 {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    color: #fff;
+}
+
+.about h2 {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 8px;
+    color: #fff;
+}
+
+.about h3 {
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #fff;
+}
+
