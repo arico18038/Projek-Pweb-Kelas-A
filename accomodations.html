@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, ssinitial-scale=1.0">
     <title>Akomodasi</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/akomodasi.css">
 </head>
 <body>
     <div class="banner">
@@ -15,11 +15,41 @@
                 <li><a href="accomodations.html">Accomodations</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="https://linktr.ee/s.homestayyk">Contact</a></li>
-                <li><a href="#">Login</a></li>
+                <li><a href="login.html">Login</a></li>
             </ul>
         </div>
         <div class="content">
-            
+            <div class="homestay-container">
+                <div class="homestay-item">
+                    <p>Homestay Jogja</p>
+                    <img src="img/rumah1.jpg" alt="Homestay 1" class="homestay-image">
+                    <p>Nama Homestay 1</p>
+                    <button onclick="pilihHomestay('Homestay 1')">Pilih Homestay Ini</button>
+                </div>
+                <div class="homestay-item">
+                    <p>Homestay Jogja</p>
+                    <img src="img/rumah2.jpg" alt="Homestay 2" class="homestay-image">
+                    <p>Nama Homestay 2</p>
+                    <button onclick="pilihHomestay('Homestay 2')">Pilih Homestay Ini</button>
+                </div>
+                <div class="homestay-item">
+                    <p>Homestay Jogja</p>
+                    <img src="img/rumah2.jpg" alt="Homestay 3" class="homestay-image">
+                    <p>Nama Homestay 3</p>
+                    <button onclick="pilihHomestay('Homestay 3')">Pilih Homestay Ini</button>
+                </div>
+            </div>
         </div>
+    </div>
+    <footer id="footer">
+        <div class="media">
+            <h2>Media</h2>
+            <a href="#"><i data-feather="facebook"></i> Facebook</a>
+            <a href="#"><i data-feather="twitter"></i> Twitter</a>
+            <a href="#"><i data-feather="instagram"></i> Instagram</a>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    
 </body>
 </html>
