@@ -19,7 +19,17 @@ body {
     background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('background.jpg');
     background-size: cover;
     background-position: center;
-    height: 90vh;
+    height: 100vh;
+    width: 100vw;
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
 }
 
 .navbar {
@@ -28,6 +38,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed; /* Menambahkan ini */
+    width: 100%; /* Pastikan navbar memenuhi lebar layar */
+    top: 0; /* Mengatur posisi navbar di atas */
+    z-index: 1000; /* Pastikan navbar selalu di atas konten lain */
 }
 
 .navbar ul {
@@ -50,9 +64,12 @@ body {
     width: 100%;
 }
 
-.content {
-    text-align: center;
-    padding: 20px;
+.navbar ul li:hover::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #009688;
+    width: 100%;
 }
 
 .homestay-container {
@@ -88,23 +105,31 @@ button {
 button:hover {
     background: #004949;
 }
-footer {
-    background-color: #222;
-    color: #fff;
+footer{
+    background-color: #333;
+    color: #ffffff;
     text-align: center;
     padding: 20px 0;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    opacity: 1; /* Pastikan footer terlihat saat aktif */
-    transition: opacity 0.5s;
+    font-family: 'Arial', sans-serif;
 }
 
 footer a {
-    color: #9acd32;
+    color: #ffffff;
     text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
 }
 
 footer a:hover {
-    text-decoration: underline;
+    color: #dddddd;
+}
+
+footer .media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .media i {
+    margin-right: 8px;
 }
