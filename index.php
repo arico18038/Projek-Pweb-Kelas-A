@@ -10,11 +10,11 @@
         <div class="navbar">
             <img src="singgah.png" class="logo">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="accomodations.html">Accomodations</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="accomodations.php">Accomodations</a></li>
+                <li><a href="about.php">About</a></li>
                 <li><a href="https://linktr.ee/s.homestayyk">Contact</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="login.php">Login</a></li>
             </ul>
         </div>
 

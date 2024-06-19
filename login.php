@@ -31,6 +31,16 @@
                         Not a member? <a href="signup.html">Signup now</a>
                     </div>
                 </form>
+                <?php
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    $email = $_POST['email'];
+                    $password = $_POST['password'];
+                    // Proses login
+                    // Anda bisa menambahkan kode untuk verifikasi email dan password dengan database
+                    echo "Email: " . $email . "<br>";
+                    echo "Password: " . $password;
+                }
+                ?>
             </div>
         </div>
     </div>
