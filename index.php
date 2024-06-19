@@ -19,8 +19,8 @@
         </div>
 
         <div class="content">
-            <h1>Selamat Datang di Brigoda</h1>
-            <p>Pilihan terbaik dengan harga terbaik ada disini,<br>Pilih kamar suka suka refund suka suka </p>
+            <h1>Selamat Datang di Singgahin</h1>
+            <p>Pilihan terbaik dengan harga terbaik ada disini,<br>Pilih tempat singgah suka suka refund suka suka </p>
 
             <form>
                 <label for="check-in">Check-In/Check-Out</label>

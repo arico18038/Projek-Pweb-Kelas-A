@@ -259,20 +259,20 @@ form .form-inner
 }
 
 .text {
-    margin-top: 150px;
+    margin-top: ;
 }
 
 .about p {
     padding-left: 15px;
     padding-right: 15px;
-    padding-bottom: 5px;
-    color: #fff;
+    padding-bottom: 10px;
+    color: #ddd;
 }
 
 .about h1 {
     padding-left: 15px;
     padding-right: 15px;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     color: #fff;
 }
 
