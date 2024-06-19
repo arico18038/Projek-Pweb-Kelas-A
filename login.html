@@ -10,23 +10,15 @@
     <div class="wrapper">
         <div class="title-text">
             <div class="title login">Login</div>
-            <div class="title signup">Signup</div>
-        </div>
-        <div class="slide">
-            <input type="radio" name="slider" id="login" checked>
-            <input type="radio" name="slider" id="signup">
-            <label for="login" class="login">Login</label>
-            <label for="signup" class="signup">Login</label>
-            <div class="slider-tab"></div>
         </div>
         <div class="form-container">
             <div class="form-inner">
-                <form action="#" class="login">
+                <form action="login.php" method="post" class="login">
                     <div class="field">
-                        <input type="text" placeholder="Email" required>
+                        <input type="text" name="email" placeholder="Email" required>
                     </div>
                     <div class="field">
-                        <input type="password" placeholder="Password" required>
+                        <input type="password" name="password" placeholder="Password" required>
                     </div>
                     <div class="pass-link">
                         <a href="#">Forgot password?</a>
@@ -38,21 +30,6 @@
                     <div class="signup-link">
                         Not a member? <a href="signup.html">Signup now</a>
                     </div>
-                </form>
-                <!-- <form action="#" class="signup">
-                    <div class="field">
-                        <input type="text" placeholder="Email" required>
-                    </div>
-                    <div class="field">
-                        <input type="password" placeholder="Password" required>
-                    </div>
-                    <div class="field">
-                        <input type="password" placeholder="Confirm Password" required>
-                    </div>
-                    <div class="field btn">
-                        <div class="btn-layer"></div>
-                        <input type="submit" value="Signup">
-                    </div> -->
                 </form>
             </div>
         </div>

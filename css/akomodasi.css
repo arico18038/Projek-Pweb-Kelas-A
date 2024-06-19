@@ -77,19 +77,26 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
+    font-family: 'Arial', sans-serif;
 }
 
 .homestay-item {
-    background: #ffffff;
+    background: #fff9e5;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(255, 252, 64, 0.1);
     padding: 20px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Menambahkan transisi untuk transform dan box-shadow */
+}
+.homestay-item:hover {
+    transform: translateY(-10px); /* Efek hover yang membuat item terangkat */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Bayangan lebih dramatis saat hover */
 }
 
+
 .homestay-image {
-    width: 100%;
-    height: auto;
+    width: 80%; /* Atur lebar menjadi 80% dari lebar aslinya */
+    height: auto; /* Menjaga rasio aspek gambar */
     border-radius: 5px;
 }
 
@@ -103,7 +110,7 @@ button {
 }
 
 button:hover {
-    background: #004949;
+    background: #00ff2a;
 }
 footer{
     background-color: #333;
@@ -132,4 +139,24 @@ footer .media {
 
 footer .media i {
     margin-right: 8px;
+}
+
+.homestay-item p {
+    font-size: 16px; /* Atur ukuran font */
+    color: #000000; /* Atur warna font */
+    font-weight: bold; /* Membuat teks lebih tebal */
+    margin: 10px 0; /* Memberi jarak atas dan bawah */
+}
+
+.homestay-item p:nth-child(3) { /* Hanya target paragraf ketiga yang biasanya adalah harga */
+    font-size: 18px; /* Membuat font harga lebih besar */
+    font-family: 'Arial', sans-serif; /* Mengganti jenis font jika perlu */
+}
+
+.homestay-item .harga {
+    background-color: rgba(255, 255, 255, 0.8); /* Menambahkan background putih transparan */
+    padding: 5px 10px; /* Menambahkan padding */
+    border-radius: 5px; /* Membuat sudut menjadi bulat */
+    font-weight: bold; /* Membuat teks lebih tebal */
+    color: #005f5f; /* Mengubah warna teks */
 }
