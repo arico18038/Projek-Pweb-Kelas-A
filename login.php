@@ -1,3 +1,39 @@
+<?php
+session_start();
+$error_message = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $data_valid = false;
+    $file = fopen("signup_data.txt", "r");
+    while (!feof($file)) {
+        $line = fgets($file);
+        list($file_username, $file_email, $file_password) = explode(", ", $line);
+        // Menghapus prefix dan whitespace
+        $file_email = trim(str_replace("Email: ", "", $file_email));
+        $file_password = trim(str_replace("Password: ", "", $file_password));
+        $file_username = trim(str_replace("Username: ", "", $file_username));
+
+        if ($file_email == $email && $file_password == $password) {
+            $data_valid = true;
+            $username = $file_username; // Sudah tidak perlu ekstrak lagi
+            break;
+        }
+    }
+    fclose($file);
+
+    if ($data_valid) {
+        $_SESSION['user'] = $username; // Simpan nama pengguna ke session
+        file_put_contents('user.txt', $username); // Menulis username ke dalam file user.txt
+        header("Location: index.php"); // Redirect ke halaman index
+        exit;
+    } else {
+        $error_message = "Email atau password tidak valid.";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,27 +56,17 @@
                     <div class="field">
                         <input type="password" name="password" placeholder="Password" required>
                     </div>
-                    <div class="pass-link">
-                        <a href="#">Forgot password?</a>
-                    </div>
+                    <?php if ($error_message): ?>
+                        <p style="color: red;"><?= $error_message ?></p>
+                    <?php endif; ?>
                     <div class="field btn">
                         <div class="btn-layer"></div>
                         <input type="submit" value="Login">
                     </div>
                     <div class="signup-link">
-                        Not a member? <a href="signup.html">Signup now</a>
+                        Belum terdaftar? <a href="signup.php">Daftar sekarang</a>
                     </div>
                 </form>
-                <?php
-                if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                    $email = $_POST['email'];
-                    $password = $_POST['password'];
-                    // Proses login
-                    // Anda bisa menambahkan kode untuk verifikasi email dan password dengan database
-                    echo "Email: " . $email . "<br>";
-                    echo "Password: " . $password;
-                }
-                ?>
             </div>
         </div>
     </div>
