@@ -5,7 +5,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-.logo{
+.logo {
     width: 100px;
     height: 100px;
 }
@@ -21,27 +21,19 @@ body {
     background-position: center;
     height: 100vh;
     width: 100vw;
-}
-
-.content {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    color: #fff;
+    position: relative;
 }
 
 .navbar {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 1rem 2%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed; /* Menambahkan ini */
-    width: 100%; /* Pastikan navbar memenuhi lebar layar */
-    top: 0; /* Mengatur posisi navbar di atas */
-    z-index: 1000; /* Pastikan navbar selalu di atas konten lain */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar ul {
@@ -56,12 +48,8 @@ body {
     text-decoration: none;
 }
 
-.navbar ul li:hover::after {
-    content: '';
-    display: block;
-    height: 2px;
-    background: #009688;
-    width: 100%;
+.navbar ul li a:hover {
+    color: #00bfa5;
 }
 
 .navbar ul li:hover::after {
@@ -70,6 +58,46 @@ body {
     height: 2px;
     background: #009688;
     width: 100%;
+}
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+.content h1 {
+    font-size: 60px;
+    margin-top: 80px;
+    color: #fff;
+}
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+    font-size: 20px;
+    color: #ddd;
+}
+
+/* css untuk check in */
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background: #005f5f;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #004949;
+}
+
+section.booking {
+    padding: 20px;
+    background: #f8f8f8;
+    text-align: center;
 }
 
 .homestay-container {
@@ -81,27 +109,27 @@ body {
 }
 
 .homestay-item {
-    background: #fff9e5;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(255, 252, 64, 0.1);
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
     padding: 20px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Menambahkan transisi untuk transform dan box-shadow */
-}
-.homestay-item:hover {
-    transform: translateY(-10px); /* Efek hover yang membuat item terangkat */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Bayangan lebih dramatis saat hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.homestay-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
 
 .homestay-image {
-    width: 80%; /* Atur lebar menjadi 80% dari lebar aslinya */
-    height: auto; /* Menjaga rasio aspek gambar */
+    width: 80%;
+    height: auto;
     border-radius: 5px;
 }
 
 button {
-    background: #005f5f;
+    background: #00796b;
     color: #ffffff;
     border: none;
     padding: 12px 20px;
@@ -110,8 +138,14 @@ button {
 }
 
 button:hover {
-    background: #00ff2a;
+    background: #004d40;
 }
+
+.footer-hidden {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
 footer{
     background-color: #333;
     color: #ffffff;
@@ -140,23 +174,11 @@ footer .media {
 footer .media i {
     margin-right: 8px;
 }
-
-.homestay-item p {
-    font-size: 16px; /* Atur ukuran font */
-    color: #000000; /* Atur warna font */
-    font-weight: bold; /* Membuat teks lebih tebal */
-    margin: 10px 0; /* Memberi jarak atas dan bawah */
-}
-
-.homestay-item p:nth-child(3) { /* Hanya target paragraf ketiga yang biasanya adalah harga */
-    font-size: 18px; /* Membuat font harga lebih besar */
-    font-family: 'Arial', sans-serif; /* Mengganti jenis font jika perlu */
-}
-
-.homestay-item .harga {
-    background-color: rgba(255, 255, 255, 0.8); /* Menambahkan background putih transparan */
-    padding: 5px 10px; /* Menambahkan padding */
-    border-radius: 5px; /* Membuat sudut menjadi bulat */
-    font-weight: bold; /* Membuat teks lebih tebal */
-    color: #005f5f; /* Mengubah warna teks */
+input[type="submit"]:: {
+    background-color: #00796b;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }

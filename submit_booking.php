@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>Homestay</title>
-    <link rel="stylesheet" href="css/style.css"<?php echo time(); ?>">
+    <link rel="stylesheet" href="css/style.css?<?php echo time(); ?>">
 </head>
 <body>
     <div class="banner">
@@ -21,23 +21,32 @@
             } else {
               echo htmlspecialchars($username);}?> </a></li>
             </ul>
-        </div>
+        </div><div class="content">
+        <?php
+// Start session dan ambil data dari form
+$nama = $_POST['nama'];
+$email = $_POST['email'];
+$tanggal = $_POST['tanggal'];
+$hari = $_POST['hari'];
 
-        <div class="content">
-            <h1>Selamat Datang di Singgahin</h1>
-            <p>Pilihan terbaik dengan harga terbaik ada disini,<br>Pilih tempat singgah suka suka refund suka suka</p>
+// Simpan data ke dalam file teks
+$file = 'booking_data.txt';
+$content = "Nama: $nama\nEmail: $email\nTanggal Check-In: $tanggal\nDurasi: $hari hari\n";
+file_put_contents($file, $content, FILE_APPEND);
 
-            <form action="accomodations.php" method="get">
-                <label for="check-in">Check-In/Check-Out</label>
-                <input type="date" id="check-in" name="check-in">
-                <div class="guests">
-                    <label for="adults">Adults</label>
-                    <input type="number" id="adults" name="adults" value="1" min="1">
-                    <label for="children">Children</label>
-                    <input type="number" id="children" name="children" value="0" min="0">
-                </div>
-                <button type="submit">Check Availability</button>
-            </form>
+// Kirim ucapan terima kasih
+echo "<p>Terima Kasih Telah Melakukan Pemesanan, $nama. Detail Pemesanan Anda Telah Kami Simpan.</p>";
+
+// Tampilkan nota pemesanan
+echo "<div class='nota'>";
+echo "<h3>Nota Pemesanan</h3>";
+echo "<p>Nama: " . htmlspecialchars($nama) . "</p>";
+echo "<p>Email: " . htmlspecialchars($email) . "</p>";
+echo "<p>Tanggal Check-In: " . htmlspecialchars($tanggal) . "</p>";
+echo "<p>Durasi: " . htmlspecialchars($hari) . " hari</p>";
+echo "</div>";
+?>
+           
         </div>
     </div>
 
