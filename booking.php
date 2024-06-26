@@ -13,8 +13,8 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="accomodations.php">Accomodations</a></li>
                 <li><a href="about.php">About</a></li>
-                <li><a href="https://linktr.ee/s.homestayyk">Contact</a></li>
-                li><a href="login.php"><?php
+                <li><a href="kontak.php">Contact</a></li>
+                <li><a href="login.php"><?php
              session_start(); 
             $username = file_get_contents('user.txt');
             if (empty($username)) {

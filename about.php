@@ -14,7 +14,7 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="accomodations.php">Accomodations</a></li>
                 <li><a href="about.php">About</a></li>
-                <li><a href="https://linktr.ee/s.homestayyk">Contact</a></li>
+                <li><a href="kontak.php">Contact</a></li>
                <li><a href="login.php"><?php
              session_start(); 
             $username = file_get_contents('user.txt');
@@ -30,14 +30,14 @@
             <h1>Tentang Kami, Singgahin!</h1>
             <p>Didirikan pada tahun 2023 di Yogyakarta, telah berkembang dari startup kecil menjadi salah satu perusahaan perjalanan digital terbesar di Yogyakarta. Misi Singgahin adalah untuk mempermudah semua orang untuk mendapatkan tempat singgah di Yogyakarta.. 
             Melalui investasi dalam bidang teknologi yang membantu mengurangi masalah dalam perjalanan, Singgahin dengan mulus menghubungkan traveler dengan pengalaman yang berkesan dan tempat menginap yang luar biasa - dari rumah sampai hotel dan masih banyak lagi. 
-            <br>Sebagai salah satu marketplace terbesar di Yogyakarta untuk merek-merek mapan dan pengusaha dari berbagai level, Singgahin membantu akomodasi di seluruh Yogyakarta untuk menjangkau pasar lokal dan mengembangkan bisnisnya.
-            Singgahin menawarkan lebih dari 28 juta listing akomodasi yang terdaftar, termasuk lebih dari 6,6 juta listing rumah, apartemen, dan tempat menginap unik lainnya.
+            <br> <br>Sebagai salah satu marketplace terbesar di Yogyakarta untuk merek-merek mapan dan pengusaha dari berbagai level, Singgahin membantu akomodasi di seluruh Yogyakarta untuk menjangkau pasar lokal dan mengembangkan bisnisnya.
+            Singgahin menawarkan ribuan listing akomodasi yang terdaftar, termasuk rumah, apartemen, dan tempat menginap unik lainnya.
             Ke mana pun Anda pergi dan apa pun yang ingin Anda lakukan, membuat semuanya lebih mudah dan mendukung Anda dengan layanan customer service 24 jam.</p>
         </div>
 
         <div class="section offerings">
             <h1>Apa yang Ditawarkan, Singgahin!</h1>
-            <p>Apakah Anda ingin tinggal di apartemen kota yang cantik, resor pantai mewah atau B&B yang nyaman di pedesaan, Singgahin memberi Anda keragaman dan keluasan pilihan yang menakjubkan <br> semuanya di satu tempat.</p>
+            <p>Apakah Anda ingin tinggal di apartemen kota yang cantik, resor pantai mewah atau B&B yang nyaman di pedesaan, Singgahin memberi Anda keragaman dan keluasan pilihan yang menakjubkan semuanya di satu tempat.</p>
         </div>
 
         <div class="section team">
@@ -56,7 +56,7 @@
             <p>© 2023 Brigoda Homestay. All rights reserved.</p>
             <p>Follow us on <a href="https://instagram.com">Instagram</a>, <a href="https://facebook.com">Facebook</a></p>
         </div>
-    </footer>
+</footer>
     </div>
 </body>
 </html>

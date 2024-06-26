@@ -14,7 +14,7 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="accomodations.php">Accomodations</a></li>
                 <li><a href="about.php">About</a></li>
-                <li><a href="https://linktr.ee/s.homestayyk">Contact</a></li>
+                <li><a href="kontak.php">Contact</a></li>
                 <li><a href="login.php"><?php
              session_start(); 
             $username = file_get_contents('user.txt');
@@ -27,31 +27,31 @@
         <div class="content">
             <div class="homestay-container">
                 <div class="homestay-item">
-                    <p>HOMESTAY XT SQUARE</p>
+                    <p>Homestay Xt Square</p>
                     <img src="img/rumah1.jpg" alt="Homestay 1" class="homestay-image">
                     <p>Harga : <span class="harga">RP.300.000/hari</span></p>
                     <a href="booking.php?image=img/rumah1.jpg" class="button">Pilih Homestay Ini</a>
                 </div>
                 <div class="homestay-item">
-                    <p>Homestay bantul</p>
+                    <p>Homestay Bantul</p>
                     <img src="img/rumah2.jpg" alt="Homestay 2" class="homestay-image">
                     <p>Harga : <span class="harga">RP.450.000/hari</span></p>
                     <a href="booking.php?image=img/rumah2.jpg" class="button">Pilih Homestay Ini</a>
                 </div>
                 <div class="homestay-item">
-                    <p>Homestay tamanan</p>
+                    <p>Homestay Tamanan</p>
                     <img src="img/rumah3.jpg" alt="Homestay 3" class="homestay-image">
                     <p>Harga : <span class="harga">RP.400.000/hari</span></p>
                     <a href="booking.php?image=img/rumah3.jpg" class="button">Pilih Homestay Ini</a>
                 </div>
                 <div class="homestay-item">
-                    <p>Homestay nitikan</p>
+                    <p>Homestay Nitikan</p>
                     <img src="img/rumah4.jpg" alt="Homestay 4" class="homestay-image">
                     <p>Harga : <span class="harga">RP.600.000/hari</span></p>
                     <a href="booking.php?image=img/rumah4.jpg" class="button">Pilih Homestay Ini</a>
                 </div>
                 <div class="homestay-item">
-                    <p>Homestay sleman</p>
+                    <p>Homestay Sleman</p>
                     <img src="img/rumah5.jpg" alt="Homestay 5" class="homestay-image">
                     <p>Harga : <span class="harga">RP.600.000/hari</span></p>
                     <a href="booking.php?image=img/rumah5.jpg" class="button">Pilih Homestay Ini</a>
